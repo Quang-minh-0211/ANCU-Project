@@ -1,0 +1,134 @@
+2026-10-21 14:21:15,294: Logging to D:\Dev\ANCU Project\main\src\result\e1\runs\e1_lstm_forcing_only_QUICK_2110_142115\output.log initialized.
+2026-10-21 14:21:15,294: ### Folder structure created at D:\Dev\ANCU Project\main\src\result\e1\runs\e1_lstm_forcing_only_QUICK_2110_142115
+2026-10-21 14:21:15,295: ### Run configurations for e1_lstm_forcing_only_QUICK
+2026-10-21 14:21:15,295: experiment_name: e1_lstm_forcing_only_QUICK
+2026-10-21 14:21:15,296: run_dir: D:\Dev\ANCU Project\main\src\result\e1\runs\e1_lstm_forcing_only_QUICK_2110_142115
+2026-10-21 14:21:15,296: seed: 42
+2026-10-21 14:21:15,296: device: cuda:0
+2026-10-21 14:21:15,296: train_basin_file: D:\Dev\ANCU Project\main\src\result\e1\basins_e1_quick.txt
+2026-10-21 14:21:15,297: validation_basin_file: D:\Dev\ANCU Project\main\src\result\e1\basins_e1_quick.txt
+2026-10-21 14:21:15,298: test_basin_file: D:\Dev\ANCU Project\main\src\result\e1\basins_e1_quick.txt
+2026-10-21 14:21:15,298: train_start_date: 1980-10-01 00:00:00
+2026-10-21 14:21:15,298: train_end_date: 1990-09-30 00:00:00
+2026-10-21 14:21:15,298: validation_start_date: 1990-10-01 00:00:00
+2026-10-21 14:21:15,298: validation_end_date: 1995-09-30 00:00:00
+2026-10-21 14:21:15,299: test_start_date: 1995-10-01 00:00:00
+2026-10-21 14:21:15,299: test_end_date: 2010-09-30 00:00:00
+2026-10-21 14:21:15,299: dataset: caravan
+2026-10-21 14:21:15,300: data_dir: D:\Dev\ANCU Project\Caravan-csv
+2026-10-21 14:21:15,300: dynamic_inputs: ['total_precipitation_sum', 'temperature_2m_min', 'temperature_2m_mean', 'temperature_2m_max', 'dewpoint_temperature_2m_min', 'dewpoint_temperature_2m_mean', 'dewpoint_temperature_2m_max', 'surface_net_solar_radiation_mean', 'surface_net_solar_radiation_max', 'surface_net_thermal_radiation_min', 'surface_net_thermal_radiation_mean', 'surface_net_thermal_radiation_max', 'surface_pressure_min', 'surface_pressure_mean', 'surface_pressure_max', 'u_component_of_wind_10m_min', 'u_component_of_wind_10m_mean', 'u_component_of_wind_10m_max', 'v_component_of_wind_10m_min', 'v_component_of_wind_10m_mean', 'v_component_of_wind_10m_max', 'potential_evaporation_sum_FAO_PENMAN_MONTEITH']
+2026-10-21 14:21:15,301: target_variables: ['streamflow']
+2026-10-21 14:21:15,301: clip_targets_to_zero: ['streamflow']
+2026-10-21 14:21:15,301: seq_length: 365
+2026-10-21 14:21:15,301: predict_last_n: 1
+2026-10-21 14:21:15,301: model: cudalstm
+2026-10-21 14:21:15,303: head: regression
+2026-10-21 14:21:15,303: output_activation: linear
+2026-10-21 14:21:15,303: hidden_size: 32
+2026-10-21 14:21:15,303: initial_forget_bias: 3
+2026-10-21 14:21:15,305: output_dropout: 0.4
+2026-10-21 14:21:15,305: optimizer: Adam
+2026-10-21 14:21:15,305: loss: NSE
+2026-10-21 14:21:15,305: learning_rate: {0: 0.001}
+2026-10-21 14:21:15,305: batch_size: 256
+2026-10-21 14:21:15,306: epochs: 2
+2026-10-21 14:21:15,306: clip_gradient_norm: 1
+2026-10-21 14:21:15,307: num_workers: 0
+2026-10-21 14:21:15,307: validate_every: 1
+2026-10-21 14:21:15,307: metrics: ['NSE', 'KGE', 'Alpha-NSE', 'Beta-NSE', 'Pearson-r', 'FHV', 'FLV']
+2026-10-21 14:21:15,308: log_interval: 5
+2026-10-21 14:21:15,308: log_tensorboard: False
+2026-10-21 14:21:15,308: log_n_figures: 0
+2026-10-21 14:21:15,309: save_weights_every: 1
+2026-10-21 14:21:15,309: number_of_basins: 20
+2026-10-21 14:21:15,309: train_dir: D:\Dev\ANCU Project\main\src\result\e1\runs\e1_lstm_forcing_only_QUICK_2110_142115\train_data
+2026-10-21 14:21:15,310: img_log_dir: D:\Dev\ANCU Project\main\src\result\e1\runs\e1_lstm_forcing_only_QUICK_2110_142115\img_log
+2026-10-21 14:21:15,312: ### Device cuda:0 will be used for training
+2026-10-21 14:21:15,312: Loading basin data into xarray data set.
+2026-10-21 14:21:24,652: Calculating target variable stds per basin
+2026-10-21 14:21:24,680: Create lookup table and convert to pytorch tensor
+2026-10-21 14:21:27,203: Validation set to validate every 1 epoch(s), but 'validate_n_random_basins' not set or set to zero. Will validate on the entire validation set.
+2026-10-21 14:21:34,592: Epoch 1 average loss: avg_loss: 0.09988, avg_total_loss: 0.09988
+2026-10-21 14:21:47,668: Epoch 1 average validation loss: 0.06153 -- Median validation metrics: avg_loss: 0.06153, NSE: 0.05639, KGE: -0.10477, Alpha-NSE: 0.20450, Beta-NSE: -0.08493, Pearson-r: 0.38004, FHV: -86.23079, FLV: -151.06935
+2026-10-21 14:21:54,942: Epoch 2 average loss: avg_loss: 0.06416, avg_total_loss: 0.06416
+2026-10-21 14:21:58,234: Epoch 2 average validation loss: 0.05368 -- Median validation metrics: avg_loss: 0.05368, NSE: 0.12166, KGE: 0.01921, Alpha-NSE: 0.27845, Beta-NSE: -0.07746, Pearson-r: 0.44308, FHV: -80.15897, FLV: -104.10464
+2026-10-21 14:22:26,810: Using the model weights from result\e1\runs\e1_lstm_forcing_only_QUICK_2110_142115\model_epoch002.pt
+2026-10-21 14:22:45,533: Stored metrics at result\e1\runs\e1_lstm_forcing_only_QUICK_2110_142115\test\model_epoch002\test_metrics.csv
+2026-10-21 14:22:45,537: Stored results at result\e1\runs\e1_lstm_forcing_only_QUICK_2110_142115\test\model_epoch002\test_results.p
+2026-10-21 14:29:27,993: Logging to D:\Dev\ANCU Project\main\src\result\e1\runs\e1_lstm_forcing_only_2110_142927\output.log initialized.
+2026-10-21 14:29:27,994: ### Folder structure created at D:\Dev\ANCU Project\main\src\result\e1\runs\e1_lstm_forcing_only_2110_142927
+2026-10-21 14:29:27,994: ### Run configurations for e1_lstm_forcing_only
+2026-10-21 14:29:27,994: experiment_name: e1_lstm_forcing_only
+2026-10-21 14:29:27,994: run_dir: D:\Dev\ANCU Project\main\src\result\e1\runs\e1_lstm_forcing_only_2110_142927
+2026-10-21 14:29:27,996: seed: 42
+2026-10-21 14:29:27,996: device: cuda:0
+2026-10-21 14:29:27,996: train_basin_file: D:\Dev\ANCU Project\main\src\result\e1\basins_e1.txt
+2026-10-21 14:29:27,997: validation_basin_file: D:\Dev\ANCU Project\main\src\result\e1\basins_e1.txt
+2026-10-21 14:29:27,997: test_basin_file: D:\Dev\ANCU Project\main\src\result\e1\basins_e1.txt
+2026-10-21 14:29:27,997: train_start_date: 1980-10-01 00:00:00
+2026-10-21 14:29:27,998: train_end_date: 1990-09-30 00:00:00
+2026-10-21 14:29:27,998: validation_start_date: 1990-10-01 00:00:00
+2026-10-21 14:29:27,998: validation_end_date: 1995-09-30 00:00:00
+2026-10-21 14:29:27,999: test_start_date: 1995-10-01 00:00:00
+2026-10-21 14:29:27,999: test_end_date: 2010-09-30 00:00:00
+2026-10-21 14:29:27,999: dataset: caravan
+2026-10-21 14:29:28,000: data_dir: D:\Dev\ANCU Project\Caravan-csv
+2026-10-21 14:29:28,000: dynamic_inputs: ['total_precipitation_sum', 'temperature_2m_min', 'temperature_2m_mean', 'temperature_2m_max', 'dewpoint_temperature_2m_min', 'dewpoint_temperature_2m_mean', 'dewpoint_temperature_2m_max', 'surface_net_solar_radiation_mean', 'surface_net_solar_radiation_max', 'surface_net_thermal_radiation_min', 'surface_net_thermal_radiation_mean', 'surface_net_thermal_radiation_max', 'surface_pressure_min', 'surface_pressure_mean', 'surface_pressure_max', 'u_component_of_wind_10m_min', 'u_component_of_wind_10m_mean', 'u_component_of_wind_10m_max', 'v_component_of_wind_10m_min', 'v_component_of_wind_10m_mean', 'v_component_of_wind_10m_max', 'potential_evaporation_sum_FAO_PENMAN_MONTEITH']
+2026-10-21 14:29:28,000: target_variables: ['streamflow']
+2026-10-21 14:29:28,001: clip_targets_to_zero: ['streamflow']
+2026-10-21 14:29:28,001: seq_length: 365
+2026-10-21 14:29:28,001: predict_last_n: 1
+2026-10-21 14:29:28,001: model: cudalstm
+2026-10-21 14:29:28,002: head: regression
+2026-10-21 14:29:28,002: output_activation: linear
+2026-10-21 14:29:28,002: hidden_size: 256
+2026-10-21 14:29:28,003: initial_forget_bias: 3
+2026-10-21 14:29:28,003: output_dropout: 0.4
+2026-10-21 14:29:28,003: optimizer: Adam
+2026-10-21 14:29:28,005: loss: NSE
+2026-10-21 14:29:28,005: learning_rate: {0: 0.001, 10: 0.0005, 25: 0.0001}
+2026-10-21 14:29:28,005: batch_size: 256
+2026-10-21 14:29:28,005: epochs: 30
+2026-10-21 14:29:28,006: clip_gradient_norm: 1
+2026-10-21 14:29:28,006: num_workers: 0
+2026-10-21 14:29:28,006: validate_every: 1
+2026-10-21 14:29:28,007: metrics: ['NSE', 'KGE', 'Alpha-NSE', 'Beta-NSE', 'Pearson-r', 'FHV', 'FLV']
+2026-10-21 14:29:28,007: log_interval: 5
+2026-10-21 14:29:28,007: log_tensorboard: False
+2026-10-21 14:29:28,007: log_n_figures: 0
+2026-10-21 14:29:28,007: save_weights_every: 1
+2026-10-21 14:29:28,009: number_of_basins: 638
+2026-10-21 14:29:28,009: train_dir: D:\Dev\ANCU Project\main\src\result\e1\runs\e1_lstm_forcing_only_2110_142927\train_data
+2026-10-21 14:29:28,010: img_log_dir: D:\Dev\ANCU Project\main\src\result\e1\runs\e1_lstm_forcing_only_2110_142927\img_log
+2026-10-21 14:29:28,031: ### Device cuda:0 will be used for training
+2026-10-21 14:29:28,033: Loading basin data into xarray data set.
+2026-10-21 14:34:23,676: Calculating target variable stds per basin
+2026-10-21 14:34:24,430: Create lookup table and convert to pytorch tensor
+2026-10-21 14:34:37,161: Validation set to validate every 1 epoch(s), but 'validate_n_random_basins' not set or set to zero. Will validate on the entire validation set.
+2026-10-21 14:42:00,345: Epoch 1 average loss: avg_loss: 0.04569, avg_total_loss: 0.04569
+2026-10-21 14:49:23,226: Epoch 1 average validation loss: 0.03676 -- Median validation metrics: avg_loss: 0.03676, NSE: 0.44183, KGE: 0.42966, Alpha-NSE: 0.59627, Beta-NSE: 0.01308, Pearson-r: 0.74076, FHV: -40.37437, FLV: -7.85391
+2026-10-21 14:56:34,105: Epoch 2 average loss: avg_loss: 0.03624, avg_total_loss: 0.03624
+2026-10-21 14:58:47,463: Epoch 2 average validation loss: 0.03463 -- Median validation metrics: avg_loss: 0.03463, NSE: 0.47194, KGE: 0.44158, Alpha-NSE: 0.59022, Beta-NSE: -0.07813, Pearson-r: 0.74471, FHV: -41.77373, FLV: -38.16470
+2026-10-21 15:05:59,721: Epoch 3 average loss: avg_loss: 0.03310, avg_total_loss: 0.03310
+2026-10-21 15:08:12,065: Epoch 3 average validation loss: 0.03340 -- Median validation metrics: avg_loss: 0.03340, NSE: 0.47892, KGE: 0.48226, Alpha-NSE: 0.65393, Beta-NSE: -0.03519, Pearson-r: 0.74913, FHV: -34.49994, FLV: -26.08400
+2026-10-21 15:15:23,082: Epoch 4 average loss: avg_loss: 0.03095, avg_total_loss: 0.03095
+2026-10-21 15:17:37,863: Epoch 4 average validation loss: 0.03301 -- Median validation metrics: avg_loss: 0.03301, NSE: 0.48913, KGE: 0.47922, Alpha-NSE: 0.65113, Beta-NSE: -0.03479, Pearson-r: 0.74595, FHV: -34.41444, FLV: -9.02061
+2026-10-21 15:24:52,122: Epoch 5 average loss: avg_loss: 0.02959, avg_total_loss: 0.02959
+2026-10-21 15:27:05,184: Epoch 5 average validation loss: 0.03290 -- Median validation metrics: avg_loss: 0.03290, NSE: 0.49024, KGE: 0.52419, Alpha-NSE: 0.68580, Beta-NSE: -0.04497, Pearson-r: 0.74666, FHV: -31.85771, FLV: -39.10598
+2026-10-21 15:34:36,303: Epoch 6 average loss: avg_loss: 0.02813, avg_total_loss: 0.02813
+2026-10-21 15:36:56,516: Epoch 6 average validation loss: 0.03352 -- Median validation metrics: avg_loss: 0.03352, NSE: 0.48413, KGE: 0.53102, Alpha-NSE: 0.70704, Beta-NSE: -0.05411, Pearson-r: 0.73284, FHV: -28.77031, FLV: -31.17263
+2026-10-21 15:44:24,377: Epoch 7 average loss: avg_loss: 0.02705, avg_total_loss: 0.02705
+2026-10-21 15:46:45,602: Epoch 7 average validation loss: 0.03369 -- Median validation metrics: avg_loss: 0.03369, NSE: 0.49223, KGE: 0.51201, Alpha-NSE: 0.68964, Beta-NSE: -0.05666, Pearson-r: 0.74043, FHV: -30.73172, FLV: -117.46323
+2026-10-21 15:54:14,558: Epoch 8 average loss: avg_loss: 0.02618, avg_total_loss: 0.02618
+2026-10-21 15:56:33,710: Epoch 8 average validation loss: 0.03302 -- Median validation metrics: avg_loss: 0.03302, NSE: 0.48420, KGE: 0.54136, Alpha-NSE: 0.73738, Beta-NSE: 0.00733, Pearson-r: 0.74413, FHV: -25.87963, FLV: -51.41245
+2026-10-21 16:04:04,156: Epoch 9 average loss: avg_loss: 0.02525, avg_total_loss: 0.02525
+2026-10-21 16:06:26,106: Epoch 9 average validation loss: 0.03295 -- Median validation metrics: avg_loss: 0.03295, NSE: 0.48785, KGE: 0.52780, Alpha-NSE: 0.71409, Beta-NSE: -0.02079, Pearson-r: 0.74165, FHV: -29.02377, FLV: -36.67302
+2026-10-21 16:06:26,106: Setting learning rate to 0.0005
+2026-10-21 16:13:55,199: Epoch 10 average loss: avg_loss: 0.02248, avg_total_loss: 0.02248
+2026-10-21 16:16:15,462: Epoch 10 average validation loss: 0.03323 -- Median validation metrics: avg_loss: 0.03323, NSE: 0.49770, KGE: 0.55915, Alpha-NSE: 0.76696, Beta-NSE: -0.02276, Pearson-r: 0.74244, FHV: -23.53966, FLV: -41.76733
+2026-10-21 16:23:45,774: Epoch 11 average loss: avg_loss: 0.02133, avg_total_loss: 0.02133
+2026-10-21 16:26:06,304: Epoch 11 average validation loss: 0.03352 -- Median validation metrics: avg_loss: 0.03352, NSE: 0.49237, KGE: 0.52465, Alpha-NSE: 0.71105, Beta-NSE: -0.00810, Pearson-r: 0.73744, FHV: -28.92583, FLV: -20.73420
+2026-10-21 16:33:38,123: Epoch 12 average loss: avg_loss: 0.02081, avg_total_loss: 0.02081
+2026-10-21 16:35:58,736: Epoch 12 average validation loss: 0.03289 -- Median validation metrics: avg_loss: 0.03289, NSE: 0.50031, KGE: 0.57882, Alpha-NSE: 0.75659, Beta-NSE: -0.00970, Pearson-r: 0.74223, FHV: -24.17228, FLV: -36.08188
+2026-10-21 16:43:28,517: Epoch 13 average loss: avg_loss: 0.02009, avg_total_loss: 0.02009
+2026-10-21 16:45:49,015: Epoch 13 average validation loss: 0.03370 -- Median validation metrics: avg_loss: 0.03370, NSE: 0.48341, KGE: 0.54902, Alpha-NSE: 0.74759, Beta-NSE: -0.02066, Pearson-r: 0.73811, FHV: -24.70567, FLV: -34.25757
