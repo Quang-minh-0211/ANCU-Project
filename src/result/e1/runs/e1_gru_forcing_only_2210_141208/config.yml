@@ -29,15 +29,16 @@ dynamic_inputs:
 - v_component_of_wind_10m_mean
 - v_component_of_wind_10m_max
 - potential_evaporation_sum_FAO_PENMAN_MONTEITH
-epochs: 2
-experiment_name: e1_lstm_forcing_only_QUICK
+epochs: 5
+experiment_name: e1_gru_forcing_only
 head: regression
-hidden_size: 32
+hidden_size: 256
 img_log_dir: D:\Dev\ANCU 
-  Project\main\src\result\e1\runs\e1_lstm_forcing_only_QUICK_2110_140645\img_log
-initial_forget_bias: 3
+  Project\main\src\result\e1\runs\e1_gru_forcing_only_2210_141208\img_log
 learning_rate:
   0: 0.001
+  10: 0.0005
+  25: 0.0001
 log_interval: 5
 log_n_figures: 0
 log_tensorboard: false
@@ -50,31 +51,30 @@ metrics:
 - Pearson-r
 - FHV
 - FLV
-model: cudalstm
+model: gru
 num_workers: 0
-number_of_basins: 20
+number_of_basins: 638
 optimizer: Adam
 output_activation: linear
 output_dropout: 0.4
 package_version: 1.13.0
 predict_last_n: 1
 run_dir: D:\Dev\ANCU 
-  Project\main\src\result\e1\runs\e1_lstm_forcing_only_QUICK_2110_140645
+  Project\main\src\result\e1\runs\e1_gru_forcing_only_2210_141208
 save_weights_every: 1
 seed: 42
 seq_length: 365
 target_variables:
 - streamflow
-test_basin_file: D:\Dev\ANCU Project\main\src\result\e1\basins_e1_quick.txt
+test_basin_file: D:\Dev\ANCU Project\main\src\result\e1\basins_e1.txt
 test_end_date: 30/09/2010
 test_start_date: 01/10/1995
-train_basin_file: D:\Dev\ANCU Project\main\src\result\e1\basins_e1_quick.txt
+train_basin_file: D:\Dev\ANCU Project\main\src\result\e1\basins_e1.txt
 train_dir: D:\Dev\ANCU 
-  Project\main\src\result\e1\runs\e1_lstm_forcing_only_QUICK_2110_140645\train_data
+  Project\main\src\result\e1\runs\e1_gru_forcing_only_2210_141208\train_data
 train_end_date: 30/09/1990
 train_start_date: 01/10/1980
 validate_every: 1
-validation_basin_file: D:\Dev\ANCU 
-  Project\main\src\result\e1\basins_e1_quick.txt
+validation_basin_file: D:\Dev\ANCU Project\main\src\result\e1\basins_e1.txt
 validation_end_date: 30/09/1995
 validation_start_date: 01/10/1990

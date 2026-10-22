@@ -1,0 +1,97 @@
+# --- Thi nghiem ---
+experiment_name: e1_transformer_forcing_only
+run_dir: D:/Dev/ANCU Project/main/src/result/e1/runs
+seed: 42
+device: cuda:0
+
+# --- Luu vuc va moc chia (A) ---
+train_basin_file: D:/Dev/ANCU Project/main/src/result/e1/basins_e1.txt
+validation_basin_file: D:/Dev/ANCU Project/main/src/result/e1/basins_e1.txt
+test_basin_file: D:/Dev/ANCU Project/main/src/result/e1/basins_e1.txt
+train_start_date: 01/10/1980
+train_end_date: 30/09/1990
+validation_start_date: 01/10/1990
+validation_end_date: 30/09/1995
+test_start_date: 01/10/1995
+test_end_date: 30/09/2010
+
+# --- Du lieu ---
+dataset: caravan
+data_dir: D:/Dev/ANCU Project/Caravan-csv
+dynamic_inputs:
+  - total_precipitation_sum
+  - temperature_2m_min
+  - temperature_2m_mean
+  - temperature_2m_max
+  - dewpoint_temperature_2m_min
+  - dewpoint_temperature_2m_mean
+  - dewpoint_temperature_2m_max
+  - surface_net_solar_radiation_mean
+  - surface_net_solar_radiation_max
+  - surface_net_thermal_radiation_min
+  - surface_net_thermal_radiation_mean
+  - surface_net_thermal_radiation_max
+  - surface_pressure_min
+  - surface_pressure_mean
+  - surface_pressure_max
+  - u_component_of_wind_10m_min
+  - u_component_of_wind_10m_mean
+  - u_component_of_wind_10m_max
+  - v_component_of_wind_10m_min
+  - v_component_of_wind_10m_mean
+  - v_component_of_wind_10m_max
+  - potential_evaporation_sum_FAO_PENMAN_MONTEITH
+target_variables:
+  - streamflow
+clip_targets_to_zero:
+  - streamflow
+
+# --- Cua so truot ---
+seq_length: 365
+predict_last_n: 1
+
+# --- Model ---
+model: transformer
+head: regression
+output_activation: linear
+dynamics_embedding:
+  type: fc
+  hiddens: [64]
+  activation: tanh
+  dropout: 0.0
+transformer_nlayers: 4
+transformer_nheads: 4
+transformer_dim_feedforward: 256
+transformer_dropout: 0.1
+transformer_positional_encoding_type: sum
+transformer_positional_dropout: 0.0
+output_dropout: 0.1
+
+# --- Train ---
+optimizer: Adam
+loss: NSE
+learning_rate:
+  0: 0.0001
+  10: 0.0005
+  25: 1e-05
+batch_size: 128
+epochs: 5
+clip_gradient_norm: 1
+num_workers: 0
+
+# --- Danh gia ---
+validate_every: 1
+metrics:
+  - NSE
+  - KGE
+  - Alpha-NSE
+  - Beta-NSE
+  - Pearson-r
+  - FHV
+  - FLV
+
+# --- Log ---
+log_interval: 5
+log_tensorboard: False
+log_n_figures: 0
+save_weights_every: 1

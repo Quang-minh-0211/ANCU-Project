@@ -1,0 +1,61 @@
+2026-10-22 10:07:49,788: Logging to D:\Dev\ANCU Project\main\src\result\e1\runs\e1_transformer_forcing_only_2210_100749\output.log initialized.
+2026-10-22 10:07:49,788: ### Folder structure created at D:\Dev\ANCU Project\main\src\result\e1\runs\e1_transformer_forcing_only_2210_100749
+2026-10-22 10:07:49,788: ### Run configurations for e1_transformer_forcing_only
+2026-10-22 10:07:49,789: experiment_name: e1_transformer_forcing_only
+2026-10-22 10:07:49,789: run_dir: D:\Dev\ANCU Project\main\src\result\e1\runs\e1_transformer_forcing_only_2210_100749
+2026-10-22 10:07:49,790: seed: 42
+2026-10-22 10:07:49,790: device: cuda:0
+2026-10-22 10:07:49,791: train_basin_file: D:\Dev\ANCU Project\main\src\result\e1\basins_e1.txt
+2026-10-22 10:07:49,791: validation_basin_file: D:\Dev\ANCU Project\main\src\result\e1\basins_e1.txt
+2026-10-22 10:07:49,792: test_basin_file: D:\Dev\ANCU Project\main\src\result\e1\basins_e1.txt
+2026-10-22 10:07:49,792: train_start_date: 1980-10-01 00:00:00
+2026-10-22 10:07:49,792: train_end_date: 1990-09-30 00:00:00
+2026-10-22 10:07:49,792: validation_start_date: 1990-10-01 00:00:00
+2026-10-22 10:07:49,793: validation_end_date: 1995-09-30 00:00:00
+2026-10-22 10:07:49,793: test_start_date: 1995-10-01 00:00:00
+2026-10-22 10:07:49,794: test_end_date: 2010-09-30 00:00:00
+2026-10-22 10:07:49,794: dataset: caravan
+2026-10-22 10:07:49,794: data_dir: D:\Dev\ANCU Project\Caravan-csv
+2026-10-22 10:07:49,794: dynamic_inputs: ['total_precipitation_sum', 'temperature_2m_min', 'temperature_2m_mean', 'temperature_2m_max', 'dewpoint_temperature_2m_min', 'dewpoint_temperature_2m_mean', 'dewpoint_temperature_2m_max', 'surface_net_solar_radiation_mean', 'surface_net_solar_radiation_max', 'surface_net_thermal_radiation_min', 'surface_net_thermal_radiation_mean', 'surface_net_thermal_radiation_max', 'surface_pressure_min', 'surface_pressure_mean', 'surface_pressure_max', 'u_component_of_wind_10m_min', 'u_component_of_wind_10m_mean', 'u_component_of_wind_10m_max', 'v_component_of_wind_10m_min', 'v_component_of_wind_10m_mean', 'v_component_of_wind_10m_max', 'potential_evaporation_sum_FAO_PENMAN_MONTEITH']
+2026-10-22 10:07:49,795: target_variables: ['streamflow']
+2026-10-22 10:07:49,795: clip_targets_to_zero: ['streamflow']
+2026-10-22 10:07:49,795: seq_length: 365
+2026-10-22 10:07:49,796: predict_last_n: 1
+2026-10-22 10:07:49,796: model: transformer
+2026-10-22 10:07:49,797: head: regression
+2026-10-22 10:07:49,797: output_activation: linear
+2026-10-22 10:07:49,797: dynamics_embedding: {'type': 'fc', 'hiddens': [64], 'activation': 'tanh', 'dropout': 0.0}
+2026-10-22 10:07:49,798: transformer_nlayers: 4
+2026-10-22 10:07:49,798: transformer_nheads: 4
+2026-10-22 10:07:49,798: transformer_dim_feedforward: 256
+2026-10-22 10:07:49,798: transformer_dropout: 0.1
+2026-10-22 10:07:49,798: transformer_positional_encoding_type: sum
+2026-10-22 10:07:49,799: transformer_positional_dropout: 0.0
+2026-10-22 10:07:49,799: output_dropout: 0.1
+2026-10-22 10:07:49,799: optimizer: Adam
+2026-10-22 10:07:49,800: loss: NSE
+2026-10-22 10:07:49,800: learning_rate: {0: 0.0001, 10: 0.0005, 25: 1e-05}
+2026-10-22 10:07:49,800: batch_size: 128
+2026-10-22 10:07:49,801: epochs: 5
+2026-10-22 10:07:49,801: clip_gradient_norm: 1
+2026-10-22 10:07:49,801: num_workers: 0
+2026-10-22 10:07:49,801: validate_every: 1
+2026-10-22 10:07:49,802: metrics: ['NSE', 'KGE', 'Alpha-NSE', 'Beta-NSE', 'Pearson-r', 'FHV', 'FLV']
+2026-10-22 10:07:49,803: log_interval: 5
+2026-10-22 10:07:49,803: log_tensorboard: False
+2026-10-22 10:07:49,804: log_n_figures: 0
+2026-10-22 10:07:49,804: save_weights_every: 1
+2026-10-22 10:07:49,804: number_of_basins: 638
+2026-10-22 10:07:49,805: train_dir: D:\Dev\ANCU Project\main\src\result\e1\runs\e1_transformer_forcing_only_2210_100749\train_data
+2026-10-22 10:07:49,806: img_log_dir: D:\Dev\ANCU Project\main\src\result\e1\runs\e1_transformer_forcing_only_2210_100749\img_log
+2026-10-22 10:07:49,846: ### Device cuda:0 will be used for training
+2026-10-22 10:07:49,846: Loading basin data into xarray data set.
+2026-10-22 10:13:32,170: Calculating target variable stds per basin
+2026-10-22 10:13:32,919: Create lookup table and convert to pytorch tensor
+2026-10-22 10:13:48,267: Validation set to validate every 1 epoch(s), but 'validate_n_random_basins' not set or set to zero. Will validate on the entire validation set.
+2026-10-22 10:34:21,254: Epoch 1 average loss: avg_loss: 0.05645, avg_total_loss: 0.05645
+2026-10-22 10:43:45,742: Epoch 1 average validation loss: 0.04644 -- Median validation metrics: avg_loss: 0.04644, NSE: 0.31453, KGE: 0.33697, Alpha-NSE: 0.54160, Beta-NSE: -0.04084, Pearson-r: 0.63000, FHV: -49.14009, FLV: -43.66726
+2026-10-22 11:04:29,359: Epoch 2 average loss: avg_loss: 0.04424, avg_total_loss: 0.04424
+2026-10-22 11:07:56,089: Epoch 2 average validation loss: 0.04337 -- Median validation metrics: avg_loss: 0.04337, NSE: 0.37628, KGE: 0.41175, Alpha-NSE: 0.60666, Beta-NSE: -0.04761, Pearson-r: 0.67667, FHV: -40.94255, FLV: -51.08258
+2026-10-22 11:29:26,770: Epoch 3 average loss: avg_loss: 0.04002, avg_total_loss: 0.04002
+2026-10-22 11:32:54,784: Epoch 3 average validation loss: 0.05123 -- Median validation metrics: avg_loss: 0.05123, NSE: 0.33764, KGE: 0.49396, Alpha-NSE: 0.88269, Beta-NSE: 0.02188, Pearson-r: 0.70148, FHV: -14.53253, FLV: -163.57751
