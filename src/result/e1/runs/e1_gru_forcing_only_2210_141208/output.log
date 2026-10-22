@@ -57,3 +57,6 @@
 2026-10-22 15:03:11,470: Epoch 4 average validation loss: 0.03759 -- Median validation metrics: avg_loss: 0.03759, NSE: 0.44976, KGE: 0.49376, Alpha-NSE: 0.70766, Beta-NSE: -0.01850, Pearson-r: 0.71625, FHV: -30.49553, FLV: -41.06583
 2026-10-22 15:10:31,808: Epoch 5 average loss: avg_loss: 0.02906, avg_total_loss: 0.02906
 2026-10-22 15:12:48,159: Epoch 5 average validation loss: 0.03989 -- Median validation metrics: avg_loss: 0.03989, NSE: 0.42333, KGE: 0.47099, Alpha-NSE: 0.70299, Beta-NSE: -0.01775, Pearson-r: 0.70815, FHV: -29.00769, FLV: -93.54427
+2026-10-22 15:13:06,692: Using the model weights from result\e1\runs\e1_gru_forcing_only_2210_141208\model_epoch004.pt
+2026-10-22 15:26:00,053: Stored metrics at result\e1\runs\e1_gru_forcing_only_2210_141208\test\model_epoch004\test_metrics.csv
+2026-10-22 15:26:00,183: Stored results at result\e1\runs\e1_gru_forcing_only_2210_141208\test\model_epoch004\test_results.p
