@@ -1,0 +1,63 @@
+2026-10-23 14:36:28,062: Logging to D:\Dev\ANCU Project\main\src\result\e3\fold_04\runs\e3_grustatic_forcing_fold04_2310_143628\output.log initialized.
+2026-10-23 14:36:28,062: ### Folder structure created at D:\Dev\ANCU Project\main\src\result\e3\fold_04\runs\e3_grustatic_forcing_fold04_2310_143628
+2026-10-23 14:36:28,063: ### Run configurations for e3_grustatic_forcing_fold04
+2026-10-23 14:36:28,064: experiment_name: e3_grustatic_forcing_fold04
+2026-10-23 14:36:28,064: run_dir: D:\Dev\ANCU Project\main\src\result\e3\fold_04\runs\e3_grustatic_forcing_fold04_2310_143628
+2026-10-23 14:36:28,065: seed: 42
+2026-10-23 14:36:28,066: device: cuda:0
+2026-10-23 14:36:28,067: train_basin_file: D:\Dev\ANCU Project\main\src\result\e3\fold_04\train_basins.txt
+2026-10-23 14:36:28,068: validation_basin_file: D:\Dev\ANCU Project\main\src\result\e3\fold_04\train_basins.txt
+2026-10-23 14:36:28,069: test_basin_file: D:\Dev\ANCU Project\main\src\result\e3\fold_04\test_basins.txt
+2026-10-23 14:36:28,070: train_start_date: 1980-10-01 00:00:00
+2026-10-23 14:36:28,071: train_end_date: 1990-09-30 00:00:00
+2026-10-23 14:36:28,072: validation_start_date: 1990-10-01 00:00:00
+2026-10-23 14:36:28,073: validation_end_date: 1995-09-30 00:00:00
+2026-10-23 14:36:28,073: test_start_date: 1995-10-01 00:00:00
+2026-10-23 14:36:28,074: test_end_date: 2010-09-30 00:00:00
+2026-10-23 14:36:28,075: dataset: caravan
+2026-10-23 14:36:28,075: data_dir: D:\Dev\ANCU Project\Caravan-csv
+2026-10-23 14:36:28,076: dynamic_inputs: ['total_precipitation_sum', 'temperature_2m_min', 'temperature_2m_mean', 'temperature_2m_max', 'dewpoint_temperature_2m_min', 'dewpoint_temperature_2m_mean', 'dewpoint_temperature_2m_max', 'surface_net_solar_radiation_mean', 'surface_net_solar_radiation_max', 'surface_net_thermal_radiation_min', 'surface_net_thermal_radiation_mean', 'surface_net_thermal_radiation_max', 'surface_pressure_min', 'surface_pressure_mean', 'surface_pressure_max', 'u_component_of_wind_10m_min', 'u_component_of_wind_10m_mean', 'u_component_of_wind_10m_max', 'v_component_of_wind_10m_min', 'v_component_of_wind_10m_mean', 'v_component_of_wind_10m_max', 'potential_evaporation_sum_FAO_PENMAN_MONTEITH']
+2026-10-23 14:36:28,076: target_variables: ['streamflow']
+2026-10-23 14:36:28,078: clip_targets_to_zero: ['streamflow']
+2026-10-23 14:36:28,078: static_attributes: ['p_mean', 'pet_mean_FAO_PM', 'aridity_FAO_PM', 'seasonality_FAO_PM', 'frac_snow', 'high_prec_freq', 'high_prec_dur', 'low_prec_freq', 'low_prec_dur', 'ele_mt_sav', 'slp_dg_sav', 'area', 'for_pc_sse', 'crp_pc_sse', 'pst_pc_sse', 'urb_pc_sse', 'cly_pc_sav', 'slt_pc_sav', 'snd_pc_sav', 'soc_th_sav', 'swc_pc_syr', 'kar_pc_sse', 'gwt_cm_sav', 'lka_pc_sse', 'ire_pc_sse', 'dor_pc_pva']
+2026-10-23 14:36:28,078: seq_length: 365
+2026-10-23 14:36:28,079: predict_last_n: 1
+2026-10-23 14:36:28,080: model: gru
+2026-10-23 14:36:28,080: head: regression
+2026-10-23 14:36:28,081: output_activation: linear
+2026-10-23 14:36:28,081: hidden_size: 256
+2026-10-23 14:36:28,082: output_dropout: 0.4
+2026-10-23 14:36:28,083: optimizer: Adam
+2026-10-23 14:36:28,083: loss: NSE
+2026-10-23 14:36:28,084: learning_rate: {0: 0.001, 10: 0.0005, 25: 0.0001}
+2026-10-23 14:36:28,085: batch_size: 256
+2026-10-23 14:36:28,085: epochs: 5
+2026-10-23 14:36:28,086: clip_gradient_norm: 1
+2026-10-23 14:36:28,086: num_workers: 0
+2026-10-23 14:36:28,087: validate_every: 1
+2026-10-23 14:36:28,088: metrics: ['NSE', 'KGE', 'Alpha-NSE', 'Beta-NSE', 'Pearson-r', 'FHV', 'FLV']
+2026-10-23 14:36:28,088: log_interval: 5
+2026-10-23 14:36:28,089: log_tensorboard: False
+2026-10-23 14:36:28,090: log_n_figures: 0
+2026-10-23 14:36:28,090: save_weights_every: 1
+2026-10-23 14:36:28,090: number_of_basins: 585
+2026-10-23 14:36:28,091: train_dir: D:\Dev\ANCU Project\main\src\result\e3\fold_04\runs\e3_grustatic_forcing_fold04_2310_143628\train_data
+2026-10-23 14:36:28,091: img_log_dir: D:\Dev\ANCU Project\main\src\result\e3\fold_04\runs\e3_grustatic_forcing_fold04_2310_143628\img_log
+2026-10-23 14:36:28,092: ### Device cuda:0 will be used for training
+2026-10-23 14:36:28,237: Loading basin data into xarray data set.
+2026-10-23 14:41:52,937: Calculating target variable stds per basin
+2026-10-23 14:41:53,611: Create lookup table and convert to pytorch tensor
+2026-10-23 14:42:05,541: Validation set to validate every 1 epoch(s), but 'validate_n_random_basins' not set or set to zero. Will validate on the entire validation set.
+2026-10-23 14:48:55,284: Epoch 1 average loss: avg_loss: 0.04413, avg_total_loss: 0.04413
+2026-10-23 14:56:51,299: Epoch 1 average validation loss: 0.03563 -- Median validation metrics: avg_loss: 0.03563, NSE: 0.46225, KGE: 0.45217, Alpha-NSE: 0.60484, Beta-NSE: -0.04129, Pearson-r: 0.73016, FHV: -38.54626, FLV: 0.00000
+2026-10-23 15:03:33,186: Epoch 2 average loss: avg_loss: 0.03422, avg_total_loss: 0.03422
+2026-10-23 15:05:43,285: Epoch 2 average validation loss: 0.03326 -- Median validation metrics: avg_loss: 0.03326, NSE: 0.48187, KGE: 0.49477, Alpha-NSE: 0.64016, Beta-NSE: -0.04492, Pearson-r: 0.73705, FHV: -37.53161, FLV: -80.19527
+2026-10-23 15:12:37,232: Epoch 3 average loss: avg_loss: 0.03068, avg_total_loss: 0.03068
+2026-10-23 15:14:49,454: Epoch 3 average validation loss: 0.03557 -- Median validation metrics: avg_loss: 0.03557, NSE: 0.46759, KGE: 0.48077, Alpha-NSE: 0.62307, Beta-NSE: -0.06225, Pearson-r: 0.72981, FHV: -37.07582, FLV: -75.26802
+2026-10-23 15:21:44,540: Epoch 4 average loss: avg_loss: 0.02890, avg_total_loss: 0.02890
+2026-10-23 15:23:55,351: Epoch 4 average validation loss: 0.03406 -- Median validation metrics: avg_loss: 0.03406, NSE: 0.50234, KGE: 0.54234, Alpha-NSE: 0.73209, Beta-NSE: -0.02676, Pearson-r: 0.73674, FHV: -27.27333, FLV: -106.34371
+2026-10-23 15:30:49,200: Epoch 5 average loss: avg_loss: 0.02753, avg_total_loss: 0.02753
+2026-10-23 15:33:01,547: Epoch 5 average validation loss: 0.03431 -- Median validation metrics: avg_loss: 0.03431, NSE: 0.47324, KGE: 0.56906, Alpha-NSE: 0.75789, Beta-NSE: -0.00301, Pearson-r: 0.71908, FHV: -22.32673, FLV: -70.07543
+2026-10-23 15:33:01,751: Using the model weights from result\e3\fold_04\runs\e3_grustatic_forcing_fold04_2310_143628\model_epoch004.pt
+2026-10-23 15:34:07,322: Stored metrics at result\e3\fold_04\runs\e3_grustatic_forcing_fold04_2310_143628\test\model_epoch004\test_metrics.csv
+2026-10-23 15:34:07,331: Stored results at result\e3\fold_04\runs\e3_grustatic_forcing_fold04_2310_143628\test\model_epoch004\test_results.p

@@ -1,0 +1,109 @@
+batch_size: 256
+clip_gradient_norm: 1
+clip_targets_to_zero:
+- streamflow
+commit_hash:
+data_dir: D:\Dev\ANCU Project\Caravan-csv
+dataset: caravan
+device: cuda:0
+dynamic_inputs:
+- total_precipitation_sum
+- temperature_2m_min
+- temperature_2m_mean
+- temperature_2m_max
+- dewpoint_temperature_2m_min
+- dewpoint_temperature_2m_mean
+- dewpoint_temperature_2m_max
+- surface_net_solar_radiation_mean
+- surface_net_solar_radiation_max
+- surface_net_thermal_radiation_min
+- surface_net_thermal_radiation_mean
+- surface_net_thermal_radiation_max
+- surface_pressure_min
+- surface_pressure_mean
+- surface_pressure_max
+- u_component_of_wind_10m_min
+- u_component_of_wind_10m_mean
+- u_component_of_wind_10m_max
+- v_component_of_wind_10m_min
+- v_component_of_wind_10m_mean
+- v_component_of_wind_10m_max
+- potential_evaporation_sum_FAO_PENMAN_MONTEITH
+epochs: 5
+experiment_name: e3_grustatic_forcing_fold06
+head: regression
+hidden_size: 256
+img_log_dir: D:\Dev\ANCU 
+  Project\main\src\result\e3\fold_06\runs\e3_grustatic_forcing_fold06_2310_163209\img_log
+learning_rate:
+  0: 0.001
+  10: 0.0005
+  25: 0.0001
+log_interval: 5
+log_n_figures: 0
+log_tensorboard: false
+loss: NSE
+metrics:
+- NSE
+- KGE
+- Alpha-NSE
+- Beta-NSE
+- Pearson-r
+- FHV
+- FLV
+model: gru
+num_workers: 0
+number_of_basins: 585
+optimizer: Adam
+output_activation: linear
+output_dropout: 0.4
+package_version: 1.13.0
+predict_last_n: 1
+run_dir: D:\Dev\ANCU 
+  Project\main\src\result\e3\fold_06\runs\e3_grustatic_forcing_fold06_2310_163209
+save_weights_every: 1
+seed: 42
+seq_length: 365
+static_attributes:
+- p_mean
+- pet_mean_FAO_PM
+- aridity_FAO_PM
+- seasonality_FAO_PM
+- frac_snow
+- high_prec_freq
+- high_prec_dur
+- low_prec_freq
+- low_prec_dur
+- ele_mt_sav
+- slp_dg_sav
+- area
+- for_pc_sse
+- crp_pc_sse
+- pst_pc_sse
+- urb_pc_sse
+- cly_pc_sav
+- slt_pc_sav
+- snd_pc_sav
+- soc_th_sav
+- swc_pc_syr
+- kar_pc_sse
+- gwt_cm_sav
+- lka_pc_sse
+- ire_pc_sse
+- dor_pc_pva
+target_variables:
+- streamflow
+test_basin_file: D:\Dev\ANCU Project\main\src\result\e3\fold_06\test_basins.txt
+test_end_date: 30/09/2010
+test_start_date: 01/10/1995
+train_basin_file: D:\Dev\ANCU 
+  Project\main\src\result\e3\fold_06\train_basins.txt
+train_dir: D:\Dev\ANCU 
+  Project\main\src\result\e3\fold_06\runs\e3_grustatic_forcing_fold06_2310_163209\train_data
+train_end_date: 30/09/1990
+train_start_date: 01/10/1980
+validate_every: 1
+validation_basin_file: D:\Dev\ANCU 
+  Project\main\src\result\e3\fold_06\train_basins.txt
+validation_end_date: 30/09/1995
+validation_start_date: 01/10/1990

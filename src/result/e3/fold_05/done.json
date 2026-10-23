@@ -1,0 +1,12 @@
+{
+  "run_dir": "D:\\Dev\\ANCU Project\\main\\src\\result\\e3\\fold_05\\runs\\e3_grustatic_forcing_fold05_2310_153407",
+  "best_epoch": 4,
+  "val_nse": {
+    "1": 0.47531,
+    "2": 0.45823,
+    "3": 0.48865,
+    "4": 0.50103,
+    "5": 0.49868
+  },
+  "minutes": 58.0
+}
