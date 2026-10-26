@@ -1,0 +1,248 @@
+attribute_means:
+  area: 810.3388368263403
+  aridity_FAO_PM: 0.9610330024102566
+  cly_pc_sav: 17.50529822256272
+  crp_pc_sse: 17.1715663127477
+  dor_pc_pva: 69.21880341880342
+  ele_mt_sav: 755.0063715951038
+  for_pc_sse: 69.74271339894433
+  frac_snow: 0.15082136015384615
+  gwt_cm_sav: 350.91672638374496
+  high_prec_dur: 1.222856428034188
+  high_prec_freq: 0.05199049931965812
+  ire_pc_sse: 1.0401057528874322
+  kar_pc_sse: 23.211935932666236
+  lka_pc_sse: 6.253800491870745
+  low_prec_dur: 4.478560907521367
+  low_prec_freq: 0.6442417968205129
+  p_mean: 3.0007174010940174
+  pet_mean_FAO_PM: 2.4230426632478634
+  pst_pc_sse: 14.492401052126219
+  seasonality_FAO_PM: 1.205584982
+  slp_dg_sav: 71.11788419062296
+  slt_pc_sav: 38.158441616501484
+  snd_pc_sav: 44.40095267901376
+  soc_th_sav: 49.08606428992399
+  swc_pc_syr: 71.69503967059067
+  urb_pc_sse: 0.9254264643289655
+attribute_stds:
+  area: 1755.9124387001034
+  aridity_FAO_PM: 0.5731759349974956
+  cly_pc_sav: 5.41056577393461
+  crp_pc_sse: 22.560752993010503
+  dor_pc_pva: 433.5916186564423
+  ele_mt_sav: 764.1452777667487
+  for_pc_sse: 37.02563369559443
+  frac_snow: 0.18392102966780657
+  gwt_cm_sav: 258.5352798015718
+  high_prec_dur: 0.10909276939263084
+  high_prec_freq: 0.008739112144982165
+  ire_pc_sse: 2.9018519959578537
+  kar_pc_sse: 36.001453513571185
+  lka_pc_sse: 34.6654864440447
+  low_prec_dur: 1.941943592029151
+  low_prec_freq: 0.08427252810876733
+  p_mean: 1.054304384065132
+  pet_mean_FAO_PM: 0.5346800544937662
+  pst_pc_sse: 20.35923335532298
+  seasonality_FAO_PM: 0.3289003315691575
+  slp_dg_sav: 63.26701124996024
+  slt_pc_sav: 5.922553479463999
+  snd_pc_sav: 9.287055904650405
+  soc_th_sav: 31.75340787364687
+  swc_pc_syr: 18.017955768826887
+  urb_pc_sse: 4.866828760527746
+xarray_feature_scale:
+  coords: {}
+  attrs: {}
+  dims: {}
+  data_vars:
+    dewpoint_temperature_2m_max:
+      dims: []
+      attrs: {}
+      data: 9.965433120727539
+    dewpoint_temperature_2m_mean:
+      dims: []
+      attrs: {}
+      data: 10.435041427612305
+    dewpoint_temperature_2m_min:
+      dims: []
+      attrs: {}
+      data: 11.015872955322266
+    potential_evaporation_sum_FAO_PENMAN_MONTEITH:
+      dims: []
+      attrs: {}
+      data: 1.7574512958526611
+    streamflow:
+      dims: []
+      attrs: {}
+      data: 3.5848336219787598
+    surface_net_solar_radiation_max:
+      dims: []
+      attrs: {}
+      data: 219.28009033203125
+    surface_net_solar_radiation_mean:
+      dims: []
+      attrs: {}
+      data: 80.2701416015625
+    surface_net_thermal_radiation_max:
+      dims: []
+      attrs: {}
+      data: 25.830896377563477
+    surface_net_thermal_radiation_mean:
+      dims: []
+      attrs: {}
+      data: 28.88376808166504
+    surface_net_thermal_radiation_min:
+      dims: []
+      attrs: {}
+      data: 35.022926330566406
+    surface_pressure_max:
+      dims: []
+      attrs: {}
+      data: 7.850455284118652
+    surface_pressure_mean:
+      dims: []
+      attrs: {}
+      data: 7.82553768157959
+    surface_pressure_min:
+      dims: []
+      attrs: {}
+      data: 7.801510810852051
+    temperature_2m_max:
+      dims: []
+      attrs: {}
+      data: 11.221674919128418
+    temperature_2m_mean:
+      dims: []
+      attrs: {}
+      data: 10.724685668945312
+    temperature_2m_min:
+      dims: []
+      attrs: {}
+      data: 10.603006362915039
+    total_precipitation_sum:
+      dims: []
+      attrs: {}
+      data: 6.709217071533203
+    u_component_of_wind_10m_max:
+      dims: []
+      attrs: {}
+      data: 1.7821921110153198
+    u_component_of_wind_10m_mean:
+      dims: []
+      attrs: {}
+      data: 1.508857250213623
+    u_component_of_wind_10m_min:
+      dims: []
+      attrs: {}
+      data: 1.5113089084625244
+    v_component_of_wind_10m_max:
+      dims: []
+      attrs: {}
+      data: 1.901737928390503
+    v_component_of_wind_10m_mean:
+      dims: []
+      attrs: {}
+      data: 1.705976128578186
+    v_component_of_wind_10m_min:
+      dims: []
+      attrs: {}
+      data: 1.8570160865783691
+xarray_feature_center:
+  coords: {}
+  attrs: {}
+  dims: {}
+  data_vars:
+    dewpoint_temperature_2m_max:
+      dims: []
+      attrs: {}
+      data: 7.437600135803223
+    dewpoint_temperature_2m_mean:
+      dims: []
+      attrs: {}
+      data: 4.460498809814453
+    dewpoint_temperature_2m_min:
+      dims: []
+      attrs: {}
+      data: 1.588102102279663
+    potential_evaporation_sum_FAO_PENMAN_MONTEITH:
+      dims: []
+      attrs: {}
+      data: 2.376983642578125
+    streamflow:
+      dims: []
+      attrs: {}
+      data: 1.4774259328842163
+    surface_net_solar_radiation_max:
+      dims: []
+      attrs: {}
+      data: 512.177978515625
+    surface_net_solar_radiation_mean:
+      dims: []
+      attrs: {}
+      data: 150.0724639892578
+    surface_net_thermal_radiation_max:
+      dims: []
+      attrs: {}
+      data: -31.572908401489258
+    surface_net_thermal_radiation_mean:
+      dims: []
+      attrs: {}
+      data: -62.256717681884766
+    surface_net_thermal_radiation_min:
+      dims: []
+      attrs: {}
+      data: -95.52589416503906
+    surface_pressure_max:
+      dims: []
+      attrs: {}
+      data: 93.63011169433594
+    surface_pressure_mean:
+      dims: []
+      attrs: {}
+      data: 93.3729248046875
+    surface_pressure_min:
+      dims: []
+      attrs: {}
+      data: 93.1146240234375
+    temperature_2m_max:
+      dims: []
+      attrs: {}
+      data: 15.515427589416504
+    temperature_2m_mean:
+      dims: []
+      attrs: {}
+      data: 10.477126121520996
+    temperature_2m_min:
+      dims: []
+      attrs: {}
+      data: 5.855966567993164
+    total_precipitation_sum:
+      dims: []
+      attrs: {}
+      data: 3.017062187194824
+    u_component_of_wind_10m_max:
+      dims: []
+      attrs: {}
+      data: 1.7844295501708984
+    u_component_of_wind_10m_mean:
+      dims: []
+      attrs: {}
+      data: 0.4004127085208893
+    u_component_of_wind_10m_min:
+      dims: []
+      attrs: {}
+      data: -0.9174782633781433
+    v_component_of_wind_10m_max:
+      dims: []
+      attrs: {}
+      data: 1.6597625017166138
+    v_component_of_wind_10m_mean:
+      dims: []
+      attrs: {}
+      data: 0.22067399322986603
+    v_component_of_wind_10m_min:
+      dims: []
+      attrs: {}
+      data: -1.1697338819503784
